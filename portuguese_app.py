@@ -6,7 +6,7 @@ import numpy as np
 import joblib
 
 # =========================================================================
-# 1. LOAD THE STANDARD PIPELINE
+# 1. LOADING THE STANDARD PIPELINE
 # =========================================================================
 @st.cache_resource
 def load_production_pipeline():
@@ -26,7 +26,7 @@ st.title("Portuguese Banking Campaign Conversion Predictor")
 col1, col2, col3 = st.columns([1, 3, 1])
 
 with col2:
-    st.image(r'D:\MachineLearning\Epsilon\Final Project - ML\Portuguese\bank.jpg')
+    st.image("bank.jpg")
 
 
 st.header("Lead Attributes")
@@ -57,7 +57,7 @@ with col2:
     personal_loan = st.selectbox("Has Personal Loan?", ['no', 'yes'])
 
 # =========================================================================
-# 3. BUILD THE MATCHING DATAFRAME ROW
+# 3. BUILDING THE MATCHING DATAFRAME ROW
 # =========================================================================
 
 new_data = pd.DataFrame([{
@@ -78,7 +78,7 @@ new_data = pd.DataFrame([{
 }])
 
 # =========================================================================
-# 4. PREDICT USING YOUR THRESHOLD INLINE
+# 4. PREDICTING USING YOUR THRESHOLD INLINE
 # =========================================================================
 st.divider()
 
